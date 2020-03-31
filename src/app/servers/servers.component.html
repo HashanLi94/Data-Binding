@@ -1,0 +1,27 @@
+<h2>Server Status</h2>
+<hr>
+<app-server1></app-server1>
+<app-server2></app-server2>
+
+
+
+<label>Sever name here</label>
+<input type="text"
+  class="form-control"
+  (input)="onUpdateServerName($event)">
+<p> {{serverName}} </p>
+
+
+<label>Server ID here </label>
+<input type="text"
+class="form-control"
+(input)="onServerIdCreation($event)">
+<p> {{ serverId }}</p>
+
+<label>Server section</label>
+<input type="text"
+  class="form-control"
+  (input)="onServerUpdateServerSection($event)">
+<p> {{ serverSection }}</p>
+<p> {{serverCreationStatus}}</p>
+<button class="btn btn-primary" [disabled]="!newServerAdd" (click)="onServerCreation()">Add server</button>
